@@ -1428,6 +1428,10 @@ font-weight: bolder;
 /* RESPONSIVE (MOBILE) NAV */
 @media (max-width: 600px) {
 
+  hero-video{
+    object-position: center top;
+  }
+
 .navbar{
      padding: 0.9rem 0;
   }
@@ -1485,9 +1489,9 @@ font-weight: bolder;
     gap: 1.2rem;
   }
 
-.index-hero .text {
+.hero-section .text {
   position: relative;
-  z-index: 1; /* Ensure text stays above overlay */
+  z-index: 1;
 }
 
   .hero-section h1 {
@@ -1535,6 +1539,10 @@ font-weight: bolder;
 
   .meet-golden .text {
     padding: 2rem; /* reduce padding for mobile */
+  }
+
+  .meet-golden .text p {
+    text-align: left;
   }
 
   .profile-img {
@@ -1647,7 +1655,6 @@ font-weight: bolder;
   padding-top: 4rem; /* Add space under the navbar */
 }
 .about-me .text h2 {
-  border-top: 5px solid white;
   padding-top: 1rem;
   font-size: 2rem;
   text-align: center;
@@ -2034,9 +2041,9 @@ font-weight: bolder;
     gap: 1.2rem;
   }
 
-.index-hero .text {
+.hero-section .text {
   position: relative;
-  z-index: 1; /* Ensure text stays above overlay */
+  z-index: 1;
 }
 
   .hero-section h1 {
@@ -2084,6 +2091,10 @@ font-weight: bolder;
 
   .meet-golden .text {
     padding: 2rem; /* reduce padding for mobile */
+  }
+
+   .meet-golden .text p {
+    text-align: left;
   }
 
   .profile-img {
