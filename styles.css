@@ -383,19 +383,21 @@ body {
 
 /* WORK WITH GOLDEN */
 .book-golden {
-  background-color: #111;
+  background-color: #292727;
   overflow: hidden;
   padding: 4rem 2rem;
   color: black;
 }
 
 .book-golden .form-wrapper {
-  background: white;
+  flex: 0 1 480px;           /* Stop stretching full width */
+  background: rgb(245, 231, 202);
   padding: 2rem;
   border-radius: 12px;
+  margin: 0 auto;
   max-width: 500px;
-  margin: auto;
 }
+
 .book-golden .form-wrapper h2 {
   text-align: center;
 }
@@ -418,6 +420,40 @@ body {
   box-sizing: border-box;
 }
 
+.form-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background: transparent;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.form-check input[type="checkbox"]::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border-right: 2.5px solid #000;
+  border-bottom: 2.5px solid #000;
+  transform: scale(0) rotate(45deg);
+  transform-origin: bottom left;
+  position: absolute;
+  top: -35%;
+  left: 0%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.form-check input[type="checkbox"]:checked::after {
+  transform: scale(1) rotate(45deg);
+}
+
 .book-golden h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -432,14 +468,6 @@ body {
   max-width: 1200px;         /* Contain row width */
   margin: 0 auto;            /* Center row horizontally */
   padding: 2rem 1rem;
-}
-
-.book-golden .form-wrapper {
-  flex: 0 1 480px;           /* Stop stretching full width */
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 0 auto;
 }
 
 .youtube {
@@ -609,24 +637,27 @@ body {
   margin-bottom: 0.9rem; /* adjust value as you like */
 }
 
-.book-one-on-one .one-on-one-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('images/personal.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-  filter: brightness(0.3);
+.book-one-on-one {
+  background-color: rgb(245, 231, 202);
 }
 
 .book-one-on-one .form-wrapper {
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
   padding: 2rem;
   border-radius: 12px;
   max-width: 900px;
   margin: auto;
+}
+
+.book-one-on-one .form-group input,
+.book-one-on-one .form-group select,
+.book-one-on-one .form-group textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  background: transparent;
+  color: #000;
 }
 
 .book-one-on-one .form-wrapper h2 {
@@ -643,6 +674,49 @@ body {
 }
 
 .book-one-on-one p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-golden {
+  background-color: #292727;
+  border-top: 2px solid white;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  color: black;
+}
+
+.contact-golden .form-wrapper {
+  background: rgb(245, 231, 202);
+  color: black;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-golden .form-group input,
+.contact-golden .form-group select,
+.contact-golden .form-group textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  background: transparent;
+  color: #000;
+}
+
+.contact-golden .form-wrapper h2 {
+  text-align: center;
+}
+
+.contact-golden .form-wrapper p {
+  text-align: center;
+}
+
+.contact-golden h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-golden p {
   margin-bottom: 1.5rem;
 }
 
@@ -663,8 +737,7 @@ body {
 
 .privacy {
   margin-top: 5.6rem;
-  padding: 5% 20%;
-  border-top: 7px solid white;
+  padding: 5% 15%;
   border-bottom: 7px solid white;
 }
 
@@ -1052,7 +1125,7 @@ textarea {
 }
 
 .white-gap {
-  height: 4rem;
+  height: 2rem;
   background-color: white;
 }
 
@@ -1713,7 +1786,7 @@ font-weight: bolder;
     width: 100%;
     height: 100%;
     min-height: 700px;
-    object-position: center top;
+    object-position: left top;
   }
 
   .hero-buttons {
@@ -2272,7 +2345,6 @@ font-weight: bolder;
   .privacy {
   padding: 5% 2rem;
   margin-top: 4rem;
-  border-top: 5px solid white;
   border-bottom: 5px solid white;
 }
 
